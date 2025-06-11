@@ -1,1 +1,2 @@
 # Rock_Paper_Scissors
+funkcja getRockPaperorSc() przyjmuje za argument liczbę całkowitą w naszym przypadku jest to zawsze 3, która odpowiada za ilość możliwości zagrań komputera: 3 bo kamień papier nożyce, wyjątki nie sa uwzglednione, Funkcja "losuje" jedną z liczba całkowitych i wzraca odpowiadającego mu stringa
