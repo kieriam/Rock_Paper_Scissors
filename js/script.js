@@ -34,16 +34,31 @@ function getRockPaperorSc(computer_posibilities){
     return figure;
 }
 
-function getHumanChoise(player_figure){
+function getBattle(player_figure){
 
     if(player_figure=="Rock"){
-       // console.log("hell");
+       if(figure=="Paper"){
+        wynik_komputera++;
+       }else if(figure=="Scissours"){
+        wynik_gracza++;
+       }
     }else if(player_figure=="Paper"){
+        if(figure=="Scissours"){
+        wynik_komputera++;
+       }else if(figure=="Rock"){
+        wynik_gracza++;
+       }
 
     }else if(player_figure=="Scissours"){
+        if(figure=="Paper"){
+        wynik_gracza++;
+       }else if(figure=="Rock"){
+        wynik_komputera++;
+       }
 
     }else {
         console.log("bad imput you lost a round");
+        wynik_komputera++;
     }
 
     return player_figure;
@@ -53,6 +68,15 @@ function getHumanChoise(player_figure){
 for( let i = 0; i < how_many_rounds ; i++){
     //chce wczytac napis
     tekst = prompt("Chose and type: Rock, Paper, Scissours");
-    getHumanChoise(tekst);
+   // getBattle(tekst);
     console.log(getRockPaperorSc(3));
+    getBattle(tekst);
+    console.log("wynik komputera: " + wynik_komputera);
+    console.log("wynik gracza: " + wynik_gracza);
 }
+
+    if(wynik_gracza > wynik_komputera){
+        console.log("Gratulacje wygrałeś: "+ wynik_gracza + " do "+ wynik_komputera);
+    }else{
+        console.log("Niestety nie tym razem");
+    }
