@@ -1,2 +1,3 @@
 # Rock_Paper_Scissors
 funkcja getRockPaperorSc() przyjmuje za argument liczbę całkowitą w naszym przypadku jest to zawsze 3, która odpowiada za ilość możliwości zagrań komputera: 3 bo kamień papier nożyce, wyjątki nie sa uwzglednione, Funkcja "losuje" jedną z liczba całkowitych i wzraca odpowiadającego mu stringa
+Wielką frajde dało mi stworznie pomysłu i implementacja tego, żeby na zmiane pojawiały sie te obrazki i to żeby od poczatku jakiś był co nie bedzie mi to formatu strony rozjeżdzać; w przyszłości przydałoby się stworzyć jedna funcje przyjmującą odpowiedni argument oraz console logi zminić na alerty na ekranie
