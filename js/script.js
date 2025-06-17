@@ -11,8 +11,20 @@ let how_many;
 let typedvalue;
 /*onsole.log(wynik_gracza);
 
+
 console.log(wynik_komputera);*/
-console.log("cześć zagrajmy w papier,kamień,nożyce");
+
+const buttonRock = document.getElementById("Rock");
+const buttonPaper = document.getElementById("Paper");
+const buttonScissours = document.getElementById("Scissours");
+
+const imageThinker =document.getElementById("thinker");
+const imageRock =document.getElementById("rock");
+const imagePaper =document.getElementById("paper");
+const imageScissours =document.getElementById("scissours");
+
+
+/*console.log("cześć zagrajmy w papier,kamień,nożyce");*/
 how_many = prompt("ile gier chcesz zagrać");
 how_many_rounds = parseInt(how_many);//deklaracja ilości zagranych rund
 
@@ -65,10 +77,9 @@ function getBattle(player_figure){
 
 }
 
-for( let i = 0; i < how_many_rounds ; i++){
-    //chce wczytac napis
-    tekst = prompt("Chose and type: Rock, Paper, Scissours");
-   // getBattle(tekst);
+/*for( let i = 0; i < how_many_rounds ; i++){
+    //tekst = prompt("Chose and type: Rock, Paper, Scissours");
+    
     console.log(getRockPaperorSc(3));
     getBattle(tekst);
     console.log("wynik komputera: " + wynik_komputera);
@@ -79,4 +90,73 @@ for( let i = 0; i < how_many_rounds ; i++){
         console.log("Gratulacje wygrałeś: "+ wynik_gracza + " do "+ wynik_komputera);
     }else{
         console.log("Niestety nie tym razem");
+    }*/
+
+buttonRock.addEventListener('click',function(){
+    imageRock.style.display='block';
+    imagePaper.style.display='none';
+    imageScissours.style.display='none';
+    imageThinker.style.display='none';
+
+    console.log(getRockPaperorSc(3));
+    tekst="Rock";
+    console.log(getBattle(tekst));
+    console.log("wynik komputera: " + wynik_komputera);
+    console.log("wynik gracza: " + wynik_gracza);
+
+    how_many_rounds--;
+
+    if(how_many_rounds==0){
+        if(wynik_gracza > wynik_komputera){
+            console.log("Gratulacje wygrałeś: "+ wynik_gracza + " do "+ wynik_komputera);
+        }else{
+            console.log("Niestety nie tym razem");
+        }
     }
+})
+
+buttonPaper.addEventListener('click',function(){
+    imagePaper.style.display='block';
+    imageRock.style.display='none';
+    imageScissours.style.display='none';
+    imageThinker.style.display='none';
+
+    console.log(getRockPaperorSc(3));
+    tekst="Paper";
+    console.log(getBattle(tekst));
+    console.log("wynik komputera: " + wynik_komputera);
+    console.log("wynik gracza: " + wynik_gracza);
+
+    how_many_rounds--;
+
+    if(how_many_rounds==0){
+        if(wynik_gracza > wynik_komputera){
+            console.log("Gratulacje wygrałeś: "+ wynik_gracza + " do "+ wynik_komputera);
+        }else{
+            console.log("Niestety nie tym razem");
+        }
+    }
+})
+
+buttonScissours.addEventListener('click',function(){
+    imageScissours.style.display='block';
+    imageRock.style.display='none';
+    imagePaper.style.display='none';
+    imageThinker.style.display='none';
+
+    console.log(getRockPaperorSc(3));
+    tekst="Scissours";
+    console.log(getBattle(tekst));
+    console.log("wynik komputera: " + wynik_komputera);
+    console.log("wynik gracza: " + wynik_gracza);
+
+    how_many_rounds--;
+
+    if(how_many_rounds==0){
+        if(wynik_gracza > wynik_komputera){
+            console.log("Gratulacje wygrałeś: "+ wynik_gracza + " do "+ wynik_komputera);
+        }else{
+            console.log("Niestety nie tym razem");
+        }
+    }
+})
